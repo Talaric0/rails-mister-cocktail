@@ -1,0 +1,9 @@
+
+<div class="container">
+  <h1>New cocktail</h1>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url, placeholder: "https://cocktail_image.jpg" %>
+    <%= f.button :submit, class: "btn btn-outline-secondary" %>
+  <% end %>
+</div>
