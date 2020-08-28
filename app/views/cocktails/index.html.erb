@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Cocktails</h1>
   <div class="container">
+    <h1>Cocktails</h1>
     <div class="row">
       <% @cocktails.each do |cocktail| %>
       <div class="card m-3" style="width: 18rem;">
-        <img src="<%= cocktail.image_url %>" class="card-img-top" alt="...">
+        <img src="<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text"> <%= link_to cocktail.name, cocktail_path(cocktail.id) %>  <br> Some quick example text to build on the card title...
           </p>
@@ -12,5 +12,6 @@
       </div>
       <% end %>
     </div>
+    <%= link_to "Add new", new_cocktail_path, class: "btn btn-outline-secondary" %>
   </div>
 </div>

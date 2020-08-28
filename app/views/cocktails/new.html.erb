@@ -3,7 +3,9 @@
   <h1>New cocktail</h1>
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
-    <%= f.input :image_url, placeholder: "https://cocktail_image.jpg" %>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit, class: "btn btn-outline-secondary" %>
   <% end %>
+  <br>
+  <%= link_to 'Back', root_path %>
 </div>
