@@ -2,10 +2,9 @@
 <div class="container">
   <h1>New cocktail</h1>
   <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "btn btn-outline-secondary" %>
+    <%= f.input :name, placeholder: "Cocktail's name" %>
+    <%= f.input :photo, as: :file, label: "Upload a photo:" %>
+    <%= f.button :submit, class: "btn btn-outline-primary" %>
   <% end %>
-  <br>
-  <%= link_to 'Back', root_path %>
+  <%= link_to 'Back', root_path, class: "btn btn-outline-secondary" %>
 </div>
